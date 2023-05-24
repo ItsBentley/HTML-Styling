@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            main {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            /* Target first letter of a tag */
+            div::first-letter {
+                font-size: 40px;
+                font-style: italic;
+                font-weight: bold;
+                color: hsl(215, 100%, 50%);
+            }
+            ul {
+                list-style: none;
+            }
+            /* Add stuff before a list item */
+            li::before {
+                content: "\2713  ";
+            }
+            /* Fancy Colour Section */
+            *::selection {
+                background-color: yellow;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>lipsum dolor sit amet, consectetur adipisicing elit</div>
+            <div>lipsum dolor sit amet, consectetur adipisicing elit</div>
+            <div>lipsum dolor sit amet, consectetur adipisicing elit</div>
+            <br /><br />
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>React JS</li>
+            </ul>
+        </main>
+    </body>
+</html>
