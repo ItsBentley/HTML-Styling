@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <title>Animated Colour BG</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui;
+            }
+            .background {
+                background: linear-gradient(90deg, blue, red);
+                background-size: 400% 400%;
+                animation: devblog 2.5s infinite ease-in-out;
+                /* Disyplay Sizes */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 100vh;
+            }
+            @keyframes devblog {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <h1>Animated Background</h1>
+        </div>
+    </body>
+</html>

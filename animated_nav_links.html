@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <title>Animate Nav Links</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 5rem;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                text-transform: none;
+                transition: 0.25s ease;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+            }
+            li {
+                text-decoration: none;
+                margin: 0 0.75rem;
+            }
+            ul:hover a {
+                color: #575757;
+            }
+            ul:hover a:hover {
+                color: #8eaafb;
+                box-shadow: 0 0.1rem 0 0 currentColor;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
