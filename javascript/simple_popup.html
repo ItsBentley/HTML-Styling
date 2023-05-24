@@ -6,15 +6,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="dark theme" />
         <title>Simple Popup</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .pop-up {
+                width: 400px;
+                background: white;
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.1);
+                visibility: hidden;
+                text-align: center;
+                padding: 30px;
+                color: #333;
+                box-shadow: 0 5px 5px hsl(0, 0, 0, 0.2);
+                transition: transform 0.5s all ease;
+            }
+            .opened-popup {
+                transform: translate(-50%, -50%) scale(1);
+                visibility: visible;
+                opacity: 1;
+                top: 50%;
+                transition: transform 0.5s, top 0.5s;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
             <button id="btn" type="submit" onclick="show()">Show Popup</button>
             <div class="pop-up">
                 <h2>We Use Cookies!</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>Do you accept to continue?</p>
+                <br />
                 <button id="accept-btn" onclick="close()">Accept!</button>
             </div>
         </div>
+        <script>
+            const popUp = document.querySelector(".pop-up");
+            const acceptBtn = document.getElementById("accept-btn");
+
+            function show() {
+                popUp.classList.add("opened-popup");
+            }
+
+            acceptBtn.addEventListener("click", () => {
+                popUp.classList.remove("opened-popup");
+            });
+        </script>
     </body>
 </html>
