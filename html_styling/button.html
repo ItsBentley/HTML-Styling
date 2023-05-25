@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <title>Button</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .ripple-btn {
+                position: relative;
+                padding: 1rem 1.5rem;
+                color: white;
+                font-size: 1.15rem;
+                border-radius: 100vmax;
+                background-color: transparent;
+                border: 2px solid white;
+                text-transform: uppercase;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .ripple-btn:hover {
+                background-color: rgb(37, 37, 37);
+                transform: scale(1.5);
+                transition: 0.5s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="ripple-btn">Click Here</button>
+    </body>
+</html>
