@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark light" />
+        <title>Flex Containers</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .container {
+                display: flex;
+                gap: 1rem;
+            }
+            .item {
+                flex: 1 1 0;
+                padding: 1rem;
+                text-align: center;
+            }
+            .item:nth-child(1) {
+                background-color: rgb(16, 155, 125);
+            }
+            .item:nth-child(2) {
+                background-color: rgb(20, 113, 141);
+            }
+            .item:nth-child(3) {
+                background-color: rgb(153, 50, 194);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">Lorem</div>
+            <div class="item">Ipsum Dolor Sit Amet</div>
+            <div class="item">Consectetur</div>
+        </div>
+    </body>
+</html>
